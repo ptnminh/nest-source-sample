@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app/app.module';
+import { AppModule } from '@app/app.module';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { useContainer } from 'class-validator';
@@ -13,7 +13,7 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   const appPort = configService.get('app.port');
   app.use(helmet());
-  app.use(morgan('tiny'));
+  app.use(morgan('dev'));
   app.use(compression());
   app.useGlobalPipes(
     new ValidationPipe({

@@ -8,7 +8,7 @@ import {
   mapValues,
   snakeCase,
 } from 'lodash';
-import { VariableTypeEnum } from '../constants';
+import { VariableTypeEnum } from '@constants/index';
 
 @Injectable()
 export class UtilsService {

@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
-import { ConfigurationModule } from '../config/config.module';
-import { AllExceptionFilter } from '../filters/exception.filter';
-import { TransformInterceptor } from '../interceptors/transform.interceptor';
-import { UtilsModule } from '../utils/utils.module';
+import { ConfigurationModule } from '@config/config.module';
+import { AllExceptionFilter } from '@filters/exception.filter';
+import { TransformInterceptor } from '@interceptors/transform.interceptor';
+import { UtilsModule } from '@utils/utils.module';
 
 @Module({
   imports: [ConfigurationModule, UtilsModule],

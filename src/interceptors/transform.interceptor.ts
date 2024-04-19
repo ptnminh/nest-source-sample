@@ -8,8 +8,8 @@ import { ConfigService } from '@nestjs/config';
 import * as moment from 'moment-timezone';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { DataTypeEnum, FormatTimeEnum, MessageEnum } from '../constants';
-import { UtilsService } from 'src/utils/utils.service';
+import { DataTypeEnum, FormatTimeEnum, MessageEnum } from '@constants/index';
+import { UtilsService } from '@utils/utils.service';
 
 export interface IResponse {
   success: boolean;
