@@ -5,6 +5,8 @@ import { ConfigurationModule } from '@config/config.module';
 import { AllExceptionFilter } from '@filters/exception.filter';
 import { TransformInterceptor } from '@interceptors/transform.interceptor';
 import { UtilsModule } from '@utils/utils.module';
+import { RabbitMQService } from '@modules/rabbitmq/rabbitmq.service';
+import { AppService } from './app.service';
 
 @Module({
   imports: [ConfigurationModule, UtilsModule],
@@ -18,6 +20,8 @@ import { UtilsModule } from '@utils/utils.module';
       provide: 'APP_INTERCEPTOR',
       useClass: TransformInterceptor,
     },
+    RabbitMQService,
+    AppService,
   ],
 })
 export class AppModule {}
